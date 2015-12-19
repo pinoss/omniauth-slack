@@ -83,7 +83,7 @@ module OmniAuth
 
       def scopes_allowed?(required_scopes)
         return false unless options['scope']
-        scopes = options['scope'].split(',')
+        scopes = options['scope'].split(' ')
         (scopes & required_scopes).any?
       end
     end
